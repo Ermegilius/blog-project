@@ -61,7 +61,7 @@ form {
 /* here will be css for blog input (copied from contact form) */
 
   .blog-input {
-  color: white;
+  color: #000;
   font-weight: 500;
   font-size: 18px;
   border-radius: 5px;

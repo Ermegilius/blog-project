@@ -9,31 +9,24 @@
 </form>
 
 
-
-<ul>
-  <% articles.forEach((article)=> { %>
-      <li>
-          <h2>
-              <%= article.userName %>
-          </h2>
-          <p>
-              <%= article.userText %>
-          </p>
-      </li>
-      <hr />
-  <% }) %>
-</ul>
-
-
-
-<%if (locals.message) {%>
-<article>
-  <h2><%=message.userName%><h2>
-  <p><%=message.userText%></p>
-</article>
+<%if (locals.posts.length > 0) {%>
+  <ul>
+  <% locals.posts.forEach((post)=> { %>
+        <li>
+            <h2>
+                <%= post.userName %>
+            </h2>
+            <p>
+                <%= post.userText %>
+            </p>
+        </li>
+        <hr />
+    <% }) %>
+  </ul>
 <%} else {%>
   <h2>Nothing here yet</h2>
 <%}%>
-  
+
+
 <!-- Footer ejs injection-->
 <%- include ("partials/footer")%>
